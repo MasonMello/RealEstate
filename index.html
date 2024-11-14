@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zillow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="app.js"></script>
+</head>
+<body onload="calculatePayment()">
+    <section id="Images">
+        <div class="static" onclick="toggleImages()">
+            <div class="static-images">
+                <div class="image-holder-horizontal ">
+                    <img class="image1" src="/realImages/01.JPG" id="StaticImage1">
+                    
+                </div>
+                <div class="image-holder-vertical">
+                    <img class="image2" src="/realImages/02.jpg" id="StaticImage2">
+                    <img class="image3" src="/realImages/03.jpg" id="StaticImage3">
+                </div>
+                
+            </div>
+        </div>
+        <div class="carousel hidden">
+            <div class="carousel-images">
+                <div class="carousel-spacers"><img src="/realImages/01.jpg" id="Image1"></div>
+                <div class="carousel-spacers"><img src="/realImages/02.jpg" id="Image2"></div>
+                <div class="carousel-spacers"><img src="/realImages/03.jpg" id="Image3"></div>
+                <div class="carousel-spacers"><img src="/realImages/04.jpg" id="Image4"></div>
+                <div class="carousel-spacers"><img src="/realImages/05.jpg" id="Image5"></div>
+                <div class="carousel-spacers"><img src="/realImages/06.jpg" id="Image6"></div>
+                <div class="carousel-spacers"><img src="/realImages/07.jpg" id="Image7"></div>
+                <div class="carousel-spacers"><img src="/realImages/08.jpg" id="Image8"> </div>
+                <div class="carousel-spacers"><img src="/realImages/09.jpg" id="Image9"> </div>
+                <div class="carousel-spacers"><img src="/realImages/10.jpg" id="Image10"> </div>
+                <div class="carousel-spacers"><img src="/realImages/11.jpg" id="Image11"> </div>
+                <div class="carousel-spacers"><img src="/realImages/12.jpg" id="Image12"> </div>
+                <div class="carousel-spacers"><img src="/realImages/13.jpg" id="Image13"> </div>
+                <div class="carousel-spacers"><img src="/realImages/14.jpg" id="Image14"> </div>
+                <div class="carousel-spacers"><img src="/realImages/15.jpg" id="Image15"> </div>
+                <div class="carousel-spacers"><img src="/realImages/16.jpg" id="Image16"> </div>
+                <div class="carousel-spacers"><img src="/realImages/17.jpg" id="Image17"> </div>
+                <div class="carousel-spacers"><img src="/realImages/18.jpg" id="Image18"> </div>
+                <div class="carousel-spacers"><img src="/realImages/19.jpg" id="Image19"> </div>
+                <div class="carousel-spacers"><img src="/realImages/logo.jpg" id="logo"> </div>
+            </div>
+            <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
+        </div>
+    </section>
+    <section class="Information">
+        <div class="info-section">
+            <div class="info-header">
+                <h1 id="Address">5715 N Washinton Ave Emmett, Idaho</h1>
+                <h1 id="price">$99,999</h1>
+            </div>
+            <div class="top-info">
+               <h2 id="info">   <i class="fas fa-bed"></i> <span id="info-bed"> 3</span> Beds    <i class="fas fa-bath"></i> <span id="info-bath"> 3</span> Baths    <i class="fas fa-ruler-combined"></i> <span id="info-footage"> 3</span> ft²</h2>
+                <h2>Description</h2>
+                <p id="desc">This home was made from a monitor barn but then was renovated into a beautiful countryside home based in Idaho. This home has the original barn beams on the ceiling of the home. It also Has a 3 car garage and a spaceious loft with the master bedroom and master bath, in the loft. This 4,318 square ft barn home has plenty of space for activities inside and out of the home with 3 outdoor concrete slab porches on the front, back and right side of the house. We welcome you to have a tour of the house in 5715 N Washington Ave Emmett in Idaho!</p>
+                <div> <img id="Logo" src="/realImages/logo.jpg" alt="Image 8"> </div>
+            </div>
+            
+            <div class="features">
+                <h2>Home Highlights</h2>
+                <div class="list-container">
+                    <div class="column1">
+                        <ul >Parking: <span id="stats-parking"> 3 Car Garage</span></ul>
+                        <ul >Outdoor: <span id="stats-outdoor"> 3 Concrete Slab Porchese</span></ul>
+                        <ul >AC: <span id="stats-ac"> Heating and Cooling</span></ul>
+                    </div>
+                    <div class="column2">
+                        <ul >HOA: <span id="stats-hoa"> None</span></ul>
+                        <ul >Listed: <span id="stats-listed"> 1 Day Ago</span></ul>
+                        <ul >Price/Sqft: <span id="stats-sqft"> $150</span></ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section class="home-details">
+        <div class="home-details-container">
+            <h2 class="info-header">Home Details</h2>
+            <h3>Interior Details</h3>
+            <div class="interior-details">
+                <div class="list-holder">
+                    <ul class="titles">Basement:</ul>
+                    <ul id="basement-stats">Finished: 957 square footage</ul>
+                </div>
+                <div class="list-holder">
+                    <ul class="titles">Rooms:</ul>
+                    <ul id="room-stats">3</ul>
+                </div>
+                <div class="list-holder">
+                    <ul class="titles">Type of room(s):</ul>
+                    <ul id="type-stats">Bathroom, Bedroom, Recreation Room</ul>
+                </div>
+            </div>
+            <h3>Bedroom Details</h1>
+            <div class="bed-details">
+                <div class="list-holder">
+                    <ul class="titles">Number of bedrooms:</ul>
+                    <ul id="bedroom-stats">4</ul>
+                </div>
+                <div class="list-holder">
+                    <ul class="titles">Number of bathrooms:</ul>
+                    <ul id="bathroom-stats">4</ul>
+                </div>
+                <div class="list-holder">
+                    <ul class="titles">Number of bathrooms(full):</ul>
+                    <ul id="full-bathroom-stats">2</ul>
+                </div>
+            </div>
+            <h3>Dimensions</h2>
+            <div class="dimension-details">
+                <div class="list-holder">
+                    <ul class="titles">Living Area:</ul>
+                    <ul id="living-stats">N/A</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map">
+        <section class="map">
+            <h2 class="map-header">Location of the Property</h2>
+            <p class="map-description">Find the property at the following location:</p>
+            <div class="map-container">
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3415.5708517221015!2d-116.49089935112247!3d43.956442499174564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54af0b46342e6dcd%3A0x7619ee54ff8da272!2s5715%20N%20Washington%20Ave%2C%20Emmett%2C%20ID%2083617!5e0!3m2!1sen!2sus!4v1731003884254!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </section>
+    
+    <section class="features">
+        <div class="tax-information">
+            <h2>Property Taxes and Assesment Data</h2>
+            <div class="list-container">
+                <div class="column3">
+                    <ul id="stats">Year: <span id="infoYear"> 2022</span></ul>
+                    <ul id="stats">Tax: <span id="infoTax"> $10,464</span></ul>
+                    <ul id="stats">Assesment: <span id="infoAssesment"> $409,994</span></ul>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <section class="tax-calculator">
+        <h2>Mortgage Calculator</h2>
+        <div class="calculator">
+            <div class="contain">
+                 <label for="homePrice">Home Price:</label>
+                 <input type="number" id="homePrice" value="99999" onchange="calculatePayment()">
+                <input type="range" id="homePriceSlider" min="50000" max="500000" value="99999" step="1000" oninput="document.getElementById('homePrice').value = this.value; calculatePayment();">
+            </div>
+           
+            <div class="contain">
+                <label for="downPayment">Down Payment (%):</label>
+                <input type="number" id="downPayment" value="20" onchange="calculatePayment()">
+                <input type="range" id="downPaymentSlider" min="0" max="100" value="20" step="1" oninput="document.getElementById('downPayment').value = this.value; calculatePayment();">
+            </div>
+            
+            <div class="contain">
+                <label for="interestRate">Interest Rate (%):</label>
+                <input type="number" id="interestRate" value="3.5" onchange="calculatePayment()">
+                <input type="range" id="interestRateSlider" min="0" max="10" value="3.5" step="0.1" oninput="document.getElementById('interestRate').value = this.value; calculatePayment();">
+            </div>
+            
+            
+            <h3 id="monthlyPayment">Your estimated payment is $0 per month</h3>
+        </div>
+    </section>
+    <section class="similar-properties">
+        <div class="container-container">
+            <div id="similar-listings" class="similar-listings-container">
+                
+            </div> 
+        </div>
+    </section>
+</body>
+</html>
